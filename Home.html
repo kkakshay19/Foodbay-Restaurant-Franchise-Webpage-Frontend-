@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Food<span>bay</span></h1>
+                <p>Restaurant Franchise</p>
+            </div>
+            <nav class="nav-links" id="navMenu">
+                <a href="#cover">Home</a>
+                <a href="#location">Location</a>
+                <a href="#menu-section">Menu</a>
+                <a href="#about-section">About</a>
+                <a href="#reservation-section">Contact</a>
+            </nav>
+            <div class="auth-links">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign Up</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">&#9776;</div>
+        </div>
+    </header>
+
+    <section id="cover">
+        <div class="cover-content">
+            <div class="text-content">
+                <div class="rating">
+                    <span class="stars">★★★★★</span> Rated #1 Restaurant Chain
+                </div>
+                <h1>Welcome to <br><span>Foodbay</span></h1>
+                <h3>Where cravings meet flavors</h3>
+                <p>Experience culinary excellence across our 5 premium locations. From
+                    signature dishes to comfort classics, every bite tells a story of passion and flavor.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn primary">View Menu →</a>
+                    <a href="#" class="btn outline">Make Reservation</a>
+                </div>
+                <div class="stats">
+                    <div>
+                        <h2>50K+</h2>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div>
+                        <h2>5</h2>
+                        <p>Franchise Locations</p>
+                    </div>
+                    <div>
+                        <h2>20+</h2>
+                        <p>Menu Items</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="https://media.istockphoto.com/id/1054319798/photo/group-of-happy-friends-having-breakfast-in-the-restaurant.jpg?s=612x612&w=0&k=20&c=rdb2gaIzr5n2eZthvK1B73LQa3yapubVD2AM_-SF50o=" alt="Delicious Food" />
+            </div>
+        </div>
+    </section>
+    <section id="location">
+        <div class="location-header">
+            <h2>Our Locations</h2>
+            <p>Find your nearest FoodieBuddy location and experience the bomb of flavours</p>
+        </div>
+        <div class="location-grid">
+            <!-- Card 1 -->
+             <div class="location-card">
+                <div class="image-wrapper">
+                    <img src="rest1.jpeg" alt="Calicut Town">
+                    <span class="rating-badge">⭐ 4.8</span>
+                </div>
+                <div class="card-content">
+                    <h3>Calicut Town</h3>
+                    <p><span class="material-icons">location_on</span> Main Road, Calicut, KL 673001</p>
+                    <p><span class="material-icons">schedule</span> Mon-Sun: 8AM - 11PM</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+             <div class="location-card">
+                <div class="image-wrapper">
+                    <img src="rest2.webp" alt="Calicut Beach">
+                    <span class="rating-badge">⭐ 4.9</span>
+                </div>
+                <div class="card-content">
+                    <h3>Calicut Beach</h3>
+                    <p><span class="material-icons">location_on</span> Beach Road, Calicut, KL 673032</p>
+                    <p><span class="material-icons">schedule</span> Mon-Sun: 9AM - 10PM</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+             <div class="location-card">
+                <div class="image-wrapper">
+                    <img src="rest3.jpeg" alt="Wayanad">
+                    <span class="rating-badge">⭐ 4.7</span>
+                </div>
+                <div class="card-content">
+                    <h3>Wayanad</h3>
+                    <p><span class="material-icons">location_on</span> Hilltop Road, Wayanad, KL 673123</p>
+                    <p><span class="material-icons">schedule</span> Mon-Sun: 7AM - 12AM</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 4 -->
+             <div class="location-card">
+                <div class="image-wrapper">
+                    <img src="rest4.jpeg" alt="Kochi">
+                    <span class="rating-badge">⭐ 4.6</span>
+                </div>
+                <div class="card-content">
+                    <h3>Kochi</h3>
+                    <p><span class="material-icons">location_on</span> MG Road, Kochi, KL 682035</p>
+                    <p><span class="material-icons">schedule</span> Mon-Sun: 10AM - 11PM</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+            <!-- Card 5 -->
+             <div class="location-card">
+                <div class="image-wrapper">
+                    <img src="rest5.jpeg" alt="Kannur">
+                    <span class="rating-badge">⭐ 4.8</span>
+                </div>
+                <div class="card-content">
+                    <h3>Kannur</h3>
+                    <p><span class="material-icons">location_on</span> Fort Road, Kannur, KL 670001</p>
+                    <p><span class="material-icons">schedule</span> Mon-Sun: 8AM - 10PM</p>
+                    <a href="#" class="btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="menu-section">
+        <h2><span class="highlight">Our</span> Signature Dishes</h2>
+        <p class="menu-description">
+            Explore our signature dishes, carefully crafted to deliver bold flavors and exceptional experiences.
+        </p>
+        <div class="menu-grid">
+            <!-- Dish Card -->
+             <div class="dish-card">
+                <img src="https://surli.cc/uftrtw" alt="Chicken Biryani">
+                <span class="badge">Main Course</span>
+                <h3>Chicken Biryani</h3>
+                <p>Classic Hyderabadi biryani with flavorful spices.</p>
+                <div class="details">
+                    <span>₹120</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://surl.lt/zqcsmw" alt="Prawns Biriyani">
+                <span class="badge">Main Course</span>
+                <h3>Prawns Biriyani</h3>
+                <p>Juicy prawns in aromatic biryani rice.</p>
+                <div class="details">
+                    <span>₹280</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://surl.lu/uhisij" alt="Mutton Mandi">
+                <span class="badge">Main Course</span>
+                <h3>Mutton Mandi</h3>
+                <p>Arabic-style rice with tender mutton and spices.</p>
+                <div class="details">
+                    <span>₹320</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://surli.cc/chrhnh" alt="Chocolate Souffle">
+                <span class="badge dessert">Dessert</span>
+                <h3>Chocolate Souffle</h3>
+                <p>Warm, gooey chocolate dessert with a rich core.</p>
+                <div class="details">
+                    <span>₹250</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://media.istockphoto.com/id/665167430/photo/kerala-paratha.jpg?s=612x612&w=0&k=20&c=kJ1kyLFt4vhfeVlaULWUuPtWhbp1vfRHD4lXPimj7N8=" alt="Porotta Beef Combo">
+                <span class="badge">Main Course</span>
+                <h3>Porotta Beef Combo</h3>
+                <p>Kerala-style porotta with spicy beef roast.</p>
+                <div class="details">
+                    <span>₹250</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+            <div class="dish-card">
+                <img src="https://media.istockphoto.com/id/1305516603/photo/shahi-paneer-or-paneer-kadai.jpg?s=612x612&w=0&k=20&c=V5xD4I1ciIjtyoH0FzuNeFnAl7oV9RJAoNs52X6pgE4=" alt="Paneer Butter Masala">
+                <span class="badge">Veg Special</span>
+                <h3>Paneer Butter Masala</h3>
+                <p>Rich, creamy paneer curry served with butter naan.</p>
+                <div class="details">
+                    <span>₹180</span>
+                    <button>Add to Order</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+     <section id="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2><span>Our Story of<br></span> Culinary Passion</h2>
+                <p>
+                    Founded in 2020, our journey began with a simple yet powerful passion for crafting exceptional food experiences. 
+                    In just 5 years, we've grown to 5 successful franchises, delighting food lovers with innovation, flavor, and heart.
+                </p>
+                <p>
+                    Every dish we serve is a testament to our love for cooking, our dedication to quality, and our belief that good food brings people together. 
+                    Our mission is to make every meal unforgettable.
+                </p>
+            </div>
+            <div class="about-images">
+                <img src="https://media.istockphoto.com/id/677682900/photo/cooking-class.jpg?s=612x612&w=0&k=20&c=43h4fz8br734BGLGCunGXZuW7iE6EaWV0X8dEQKCnD8=" alt="Chef cooking">
+                <img src="https://media.istockphoto.com/id/1224986732/photo/directly-above-view-of-tapas.jpg?s=612x612&w=0&k=20&c=6npxQh2qFF_wBPlmyO-F_wQ23J-by4rawf9EOyXehf4=" alt="Food platter">
+            </div>
+        </div>
+        <div class="about-stats">
+            <div class="stat-box">
+                <h3>5+</h3>
+                <p>Franchises</p>
+            </div>
+            <div class="stat-box">
+                <h3>50K+</h3>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat-box">
+                <h3>2020</h3>
+                <p>Founded</p>
+            </div>
+        </div>
+    </section>
+    <section id="reservation-section">
+        <div class="reservation-heading">
+            <h2>Make a <span>Reservation</span></h2>
+            <p>
+                Reserve your table for an unforgettable dining experience. We look forward to serving you.
+            </p>
+        </div>
+        <div class="reservation-container">
+            <div class="reservation-contact">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <i class="icon">📞</i>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>+91 8590955686</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon">✉️</i>
+                    <div>
+                        <strong>Email</strong>
+                        <p>info@foodbay.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon">📍</i>
+                    <div>
+                        <strong>Address</strong>
+                        <p>Main Location, Kozhikode</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon">🕒</i>
+                    <div>
+                        <strong>Hours</strong>
+                        <p>Mon–Fri: 4:00 PM – 12:00 AM</p>
+                        <p>Sat–Sun: 5:00 PM – 11:00 PM</p>
+                    </div>
+                </div>
+                <div class="map-box">
+                    <i class="icon">🗺️</i>
+                    <h4>Visit Our Location</h4>
+                    <p>Interactive map would be integrated here</p>
+                </div>
+            </div>
+            <form class="reservation-form">
+                <h3>Reservation Details</h3>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 8590955686">
+                    </div>
+                    <div class="form-group">
+                        <label>Number of Guests *</label>
+                        <select required>
+                            <option value="">Select guests</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3–4</option>
+                            <option>5+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date *</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time *</label>
+                        <select required>
+                            <option value="">Select time</option>
+                            <option>4:00 PM</option>
+                            <option>5:00 PM</option>
+                            <option>6:00 PM</option>
+                            <option>7:00 PM</option>
+                            <option>8:00 PM</option>
+                            <option>9:00 PM</option>
+                            <option>10:00 PM</option>
+                            <option>11:00 PM</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Location *</label>
+                        <select required>
+                            <option value="">Select time</option>
+                            <option>Calicut Beach Road</option>
+                            <option>Wayanad</option>
+                            <option>Kochi</option>
+                            <option>Kannur</option>
+                            <option>Calicut Town</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label>Special Requests</label>
+                        <textarea placeholder="Any special requests or dietary restrictions..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Make Reservation
+                </button>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h2 class="logo">Food<span>bay</span></h2>
+                <p class="tagline">Where cravings meet flavors</p>
+                <p>Experience culinary excellence across our premium locations. Every dish tells a story of passion and flavor.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Signature Dishes</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone-alt"></i> +91 8590955686</p>
+                <p><i class="fas fa-envelope"></i> info@foodbay.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 5 Premium locations nationwide</p>
+            </div>
+            <div class="footer-column">
+                <h3>Hours</h3>
+                <p>Monday - Friday: <span>4PM - 12PM</span></p>
+                <p>Saturday - Sunday: <span>5pM - 11PM</span></p>
+                <button class="reserve-btn">Make Reservation</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FoodieBuddy. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Foodbay</title>
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Orders Management</h1>
+                <p>Track and manage all your restaurant orders in real-time.</p>
+            </header>
+
+            <!-- Order Summary Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Total Orders</h3>
+                        <div class="stat-value">1,247</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +18.2% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon total-orders">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Ongoing Orders</h3>
+                        <div class="stat-value">23</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +5 from yesterday
+                        </div>
+                    </div>
+                    <div class="stat-icon ongoing-orders">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Delivered Orders</h3>
+                        <div class="stat-value">1,156</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +15.8% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon delivered-orders">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Cancelled Orders</h3>
+                        <div class="stat-value">34</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            -2.1% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon cancelled-orders">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Pending Payment</h3>
+                        <div class="stat-value">12</div>
+                        <div class="stat-change neutral">
+                            <i class="fas fa-minus"></i>
+                            No change
+                        </div>
+                    </div>
+                    <div class="stat-icon pending-payment">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Refunded Orders</h3>
+                        <div class="stat-value">45</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            -8.3% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon refunded-orders">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders List -->
+            <section class="orders-section">
+                <div class="section-header">
+                    <h2>All Orders</h2>
+                    <div class="filter-controls">
+                        <select class="filter-select">
+                            <option value="all">All Orders</option>
+                            <option value="ongoing">Ongoing</option>
+                            <option value="delivered">Delivered</option>
+                            <option value="cancelled">Cancelled</option>
+                            <option value="pending">Pending Payment</option>
+                            <option value="refunded">Refunded</option>
+                        </select>
+                        <button class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i>
+                            Refresh
+                        </button>
+                    </div>
+                </div>
+
+                <div class="orders-table-container">
+                    <table class="orders-table">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Contact</th>
+                                <th>Order Date & Time</th>
+                                <th>Items</th>
+                                <th>Total Amount</th>
+                                <th>Location</th>
+                                <th>Payment Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="order-id-cell">
+                                        <span class="order-id">#ORD-2024-001</span>
+                                        <span class="order-status preparing">Preparing</span>
+                                    </div>
+                                </td>
+                                <td class="customer-name">Sarah Johnson</td>
+                                <td class="contact-info">+91 98765 43210</td>
+                                <td class="order-datetime">06 Aug 2025<br><small>11:22 AM</small></td>
+                                <td class="items-cell">
+                                    <div class="items-summary">
+                                        <div class="item-line">Margherita Pizza x2</div>
+                                        <div class="item-line">Garlic Bread x1</div>
+                                        <div class="item-line">Coke x1</div>
+                                    </div>
+                                </td>
+                                <td class="amount">₹383</td>
+                                <td class="location">Table 5<br><small>Dine-in</small></td>
+                                <td class="payment-status paid">Paid - Card</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn update-btn" title="Update Status">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order-id-cell">
+                                        <span class="order-id">#ORD-2024-002</span>
+                                        <span class="order-status delivered">Delivered</span>
+                                    </div>
+                                </td>
+                                <td class="customer-name">Mike Chen</td>
+                                <td class="contact-info">+91 87654 32109</td>
+                                <td class="order-datetime">06 Aug 2025<br><small>10:45 AM</small></td>
+                                <td class="items-cell">
+                                    <div class="items-summary">
+                                        <div class="item-line">Chicken Biryani x2</div>
+                                        <div class="item-line">Raita x2</div>
+                                        <div class="item-line">Gulab Jamun x1</div>
+                                    </div>
+                                </td>
+                                <td class="amount">₹654</td>
+                                <td class="location">123 Main St<br><small>Delivery</small></td>
+                                <td class="payment-status paid">Paid - UPI</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn print-btn" title="Print Receipt">
+                                        <i class="fas fa-print"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order-id-cell">
+                                        <span class="order-id">#ORD-2024-003</span>
+                                        <span class="order-status pending-payment">Pending Payment</span>
+                                    </div>
+                                </td>
+                                <td class="customer-name">Emily Davis</td>
+                                <td class="contact-info">+91 76543 21098</td>
+                                <td class="order-datetime">06 Aug 2025<br><small>09:30 AM</small></td>
+                                <td class="items-cell">
+                                    <div class="items-summary">
+                                        <div class="item-line">Pasta Alfredo x1</div>
+                                        <div class="item-line">Caesar Salad x1</div>
+                                    </div>
+                                </td>
+                                <td class="amount">₹269</td>
+                                <td class="location">Table 12<br><small>Dine-in</small></td>
+                                <td class="payment-status pending">Pending - Cash</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn payment-btn" title="Process Payment">
+                                        <i class="fas fa-money-bill"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order-id-cell">
+                                        <span class="order-id">#ORD-2024-004</span>
+                                        <span class="order-status cancelled">Cancelled</span>
+                                    </div>
+                                </td>
+                                <td class="customer-name">John Smith</td>
+                                <td class="contact-info">+91 65432 10987</td>
+                                <td class="order-datetime">05 Aug 2025<br><small>08:15 PM</small></td>
+                                <td class="items-cell">
+                                    <div class="items-summary">
+                                        <div class="item-line">Butter Chicken x1</div>
+                                        <div class="item-line">Naan x2</div>
+                                        <div class="item-line">Lassi x1</div>
+                                    </div>
+                                </td>
+                                <td class="amount">₹425</td>
+                                <td class="location">456 Oak Ave<br><small>Delivery</small></td>
+                                <td class="payment-status refunded">Refunded - Card</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn refund-btn" title="Refund Status">
+                                        <i class="fas fa-undo"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="order-id-cell">
+                                        <span class="order-id">#ORD-2024-005</span>
+                                        <span class="order-status ready">Ready</span>
+                                    </div>
+                                </td>
+                                <td class="customer-name">Lisa Wang</td>
+                                <td class="contact-info">+91 54321 09876</td>
+                                <td class="order-datetime">06 Aug 2025<br><small>12:15 PM</small></td>
+                                <td class="items-cell">
+                                    <div class="items-summary">
+                                        <div class="item-line">Veg Burger x2</div>
+                                        <div class="item-line">French Fries x2</div>
+                                        <div class="item-line">Milkshake x1</div>
+                                    </div>
+                                </td>
+                                <td class="amount">₹520</td>
+                                <td class="location">Table 8<br><small>Dine-in</small></td>
+                                <td class="payment-status paid">Paid - Card</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn" title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn update-btn" title="Update Status">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

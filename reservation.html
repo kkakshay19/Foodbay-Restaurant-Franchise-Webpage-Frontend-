@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay - Reservations</title>
+    <link rel="stylesheet" href="reservation.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <div class="header-content">
+                    <h1>Reservations</h1>
+                    <p class="subtitle">Manage your restaurant reservations and bookings</p>
+                </div>
+                <button class="btn-primary">
+                    <i class="fas fa-plus"></i>
+                    New Reservation
+                </button>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>6</h3>
+                        <p>Total Reservations</p>
+                    </div>
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>3</h3>
+                        <p>Confirmed Reservations</p>
+                    </div>
+                    <div class="stat-icon green">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>1</h3>
+                        <p>Pending Reservations</p>
+                    </div>
+                    <div class="stat-icon yellow">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>1</h3>
+                        <p>Completed Reservations</p>
+                    </div>
+                    <div class="stat-icon blue">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>1</h3>
+                        <p>Cancelled Reservations</p>
+                    </div>
+                    <div class="stat-icon red">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters and Search -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search by name, email, or phone...">
+                </div>
+                
+                <div class="filter-controls">
+                    <select class="filter-select">
+                        <option>All Status</option>
+                        <option>Confirmed</option>
+                        <option>Pending</option>
+                        <option>Completed</option>
+                        <option>Cancelled</option>
+                    </select>
+                    
+                    <select class="filter-select">
+                        <option>All Locations</option>
+                        <option>Calicut Town</option>
+                        <option>Calicut Beach</option>
+                        <option>Wayanad</option>
+                        <option>Kochi</option>
+                        <option>Kannur</option>
+                    </select>
+                    
+                    <input type="date" class="date-picker" value="2024-08-05">
+                </div>
+            </div>
+
+            <!-- Reservations Table -->
+            <div class="table-container">
+                <table class="reservations-table">
+                    <thead>
+                        <tr>
+                            <th>CUSTOMER</th>
+                            <th>CONTACT</th>
+                            <th>DATE & TIME</th>
+                            <th>GUESTS</th>
+                            <th>TABLE</th>
+                            <th>LOCATION</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="customer-info">
+                                    <strong>Alice Brown</strong>
+                                    <div class="reservation-id">RES-2024-001</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        alice.brown@email.com
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 123-4567
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="datetime-info">
+                                    <div class="date">2024-08-05</div>
+                                    <div class="time">7:30 PM</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="guests-count">
+                                    <i class="fas fa-users"></i>
+                                    <span>4</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table-info">
+                                    <i class="fas fa-chair"></i>
+                                    <span>Table 5</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="location">Calicut Town</span>
+                            </td>
+                            <td>
+                                <span class="status confirmed">Confirmed</span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete" title="Delete">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="customer-info">
+                                    <strong>Tom Rodriguez</strong>
+                                    <div class="reservation-id">RES-2024-002</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        tom.rodriguez@email.com
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 234-5678
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="datetime-info">
+                                    <div class="date">2024-08-05</div>
+                                    <div class="time">8:00 PM</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="guests-count">
+                                    <i class="fas fa-users"></i>
+                                    <span>2</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table-info">
+                                    <i class="fas fa-chair"></i>
+                                    <span>Table 12</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="location">Calicut Beach</span>
+                            </td>
+                            <td>
+                                <span class="status pending">Pending</span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon confirm" title="Confirm">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <button class="btn-icon edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete" title="Delete">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="customer-info">
+                                    <strong>Lisa Wang</strong>
+                                    <div class="reservation-id">RES-2024-003</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        lisa.wang@email.com
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 345-6789
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="datetime-info">
+                                    <div class="date">2024-08-05</div>
+                                    <div class="time">8:30 PM</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="guests-count">
+                                    <i class="fas fa-users"></i>
+                                    <span>6</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table-info">
+                                    <i class="fas fa-chair"></i>
+                                    <span>Table 8</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="location">Wayanad</span>
+                            </td>
+                            <td>
+                                <span class="status confirmed">Confirmed</span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn-icon delete" title="Delete">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="customer-info">
+                                    <strong>Michael Smith</strong>
+                                    <div class="reservation-id">RES-2024-004</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="contact-info">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        michael.smith@email.com
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        +1 (555) 456-7890
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="datetime-info">
+                                    <div class="date">2024-08-06</div>
+                                    <div class="time">6:00 PM</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="guests-count">
+                                    <i class="fas fa-users"></i>
+                                    <span>3</span>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="table-info">
+                                    <i class="fas fa-chair"></i>
+                                    <span>Table 3</span>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="location">Kochi</span>
+                            </td>
+                            <td>
+                                <span class="status completed">Completed</span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon edit" title="Edit">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+      <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item active">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Dashboard</h1>
+                <p>Welcome back! Here's what's happening at your restaurants today.</p>
+            </header>
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Total Revenue</h3>
+                        <div class="stat-value">₹10,36,896</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +12.5% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon revenue">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Orders Today</h3>
+                        <div class="stat-value">342</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +8.2% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon orders">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Active Reservations</h3>
+                        <div class="stat-value">89</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +15.3% from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon reservations">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Customer Rating</h3>
+                        <div class="stat-value">4.8</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            +0.2 from last month
+                        </div>
+                    </div>
+                    <div class="stat-icon rating">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Recent Orders and Upcoming Reservations -->
+            <div class="dashboard-sections">
+                <section class="recent-orders">
+                    <div class="section-header">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="orders-list">
+                        <div class="order-item">
+                            <div class="order-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-id">#ORD-2024-001</div>
+                                <div class="customer-name">Sarah Johnson</div>
+                            </div>
+                            <div class="order-status preparing">Preparing</div>
+                            <div class="order-amount">₹383</div>
+                            <div class="order-time">2 min ago</div>
+                        </div>
+                         <div class="order-item">
+                            <div class="order-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-id">#ORD-2024-002</div>
+                                <div class="customer-name">Mike Chen</div>
+                            </div>
+                            <div class="order-status ready">Ready</div>
+                            <div class="order-amount">₹654</div>
+                            <div class="order-time">5 min ago</div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-id">#ORD-2024-003</div>
+                                <div class="customer-name">Emily Davis</div>
+                            </div>
+                            <div class="order-status delivered">Delivered</div>
+                            <div class="order-amount">₹269</div>
+                            <div class="order-time">8 min ago</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="upcoming-reservations">
+                    <div class="section-header">
+                        <h2>Upcoming Reservations</h2>
+                        <a href="#" class="view-all">View All</a>
+                    </div>
+                    <div class="reservations-list">
+                        <div class="reservation-item">
+                            <div class="reservation-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="reservation-details">
+                                <div class="customer-name">Alice Brown</div>
+                                <div class="guest-count">
+                                    <i class="fas fa-users"></i>
+                                    4 persons
+                                </div>
+                            </div>
+                            <div class="reservation-time">
+                                <i class="fas fa-clock"></i>
+                                7:30 PM
+                            </div>
+                            <div class="table-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Table 5
+                            </div>
+                        </div>
+                         <div class="reservation-item">
+                            <div class="reservation-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="reservation-details">
+                                <div class="customer-name">Tom Rodriguez</div>
+                                <div class="guest-count">
+                                    <i class="fas fa-users"></i>
+                                    2 persons
+                                </div>
+                            </div>
+                            <div class="reservation-time">
+                                <i class="fas fa-clock"></i>
+                                8:00 PM
+                            </div>
+                            <div class="table-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Table 12
+                            </div>
+                        </div>
+                         <div class="reservation-item">
+                            <div class="reservation-icon">
+                                <i class="fas fa-calendar"></i>
+                            </div>
+                            <div class="reservation-details">
+                                <div class="customer-name">Lisa Wang</div>
+                                <div class="guest-count">
+                                    <i class="fas fa-users"></i>
+                                    6 persons
+                                </div>
+                            </div>
+                            <div class="reservation-time">
+                                <i class="fas fa-clock"></i>
+                                8:30 PM
+                            </div>
+                            <div class="table-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Table 8
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+</body>
