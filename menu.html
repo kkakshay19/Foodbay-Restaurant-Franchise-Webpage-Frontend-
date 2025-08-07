@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay - Menu Management</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="delivery.html" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="staff.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Admin Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Menu Management</h1>
+                <p>Manage your restaurant menu items efficiently</p>
+            </header>
+
+            <!-- Menu Summary Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Total Items</h3>
+                        <div class="stat-value">86</div>
+                    </div>
+                    <div class="stat-icon total">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Categories</h3>
+                        <div class="stat-value">8</div>
+                        <div class="stat-change">
+                            Starters, Mains, Desserts
+                        </div>
+                    </div>
+                    <div class="stat-icon categories">
+                        <i class="fas fa-list"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Available Today</h3>
+                        <div class="stat-value">78</div>
+                    </div>
+                    <div class="stat-icon available">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Specials</h3>
+                        <div class="stat-value">5</div>
+                    </div>
+                    <div class="stat-icon specials">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-content">
+                        <h3>Out of Stock</h3>
+                        <div class="stat-value">8</div>
+                    </div>
+                    <div class="stat-icon out-of-stock">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search and Filters Section -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by item name, ID, or ingredients..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select class="filter-select">
+                            <option>All</option>
+                            <option>Starters</option>
+                            <option>Mains</option>
+                            <option>Beverages</option>
+                            <option>Desserts</option>
+                            <option>Specials</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <select class="filter-select">
+                            <option>All Branches</option>
+                            <option>Calicut</option>
+                            <option>Kochi</option>
+                            <option>Trivandrum</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Availability</label>
+                        <select class="filter-select">
+                            <option>All</option>
+                            <option>Available</option>
+                            <option>Out of Stock</option>
+                            <option>Seasonal</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Table -->
+            <div class="menu-table-section">
+                <div class="section-header">
+                    <h2>Menu Items</h2>
+                    <button class="add-menu-btn" id="addMenuItemBtn">Add New Item</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>Item ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M-1001</td>
+                                <td>Chicken Biryani</td>
+                                <td>Main Course</td>
+                                <td>₹180</td>
+                                <td>All Locations</td>
+                                <td><span class="status-tag available">Available</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>M-1002</td>
+                                <td>Paneer Tikka</td>
+                                <td>Starters</td>
+                                <td>₹120</td>
+                                <td>Calicut, Kochi</td>
+                                <td><span class="status-tag available">Available</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>M-1003</td>
+                                <td>Masala Dosa</td>
+                                <td>Specials</td>
+                                <td>₹90</td>
+                                <td>All Locations</td>
+                                <td><span class="status-tag seasonal">Seasonal</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>M-1004</td>
+                                <td>Gulab Jamun</td>
+                                <td>Desserts</td>
+                                <td>₹60</td>
+                                <td>Trivandrum</td>
+                                <td><span class="status-tag out-of-stock">Out of Stock</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>M-1005</td>
+                                <td>Mango Lassi</td>
+                                <td>Beverages</td>
+                                <td>₹80</td>
+                                <td>All Locations</td>
+                                <td><span class="status-tag available">Available</span></td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn delete-btn">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add Menu Item Modal -->
+    <div id="addMenuItemModal" class="modal">
+        <div class="modal-content add-menu-modal">
+            <span class="close" onclick="closeAddMenuItemModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Add New Menu Item</h2>
+            </div>
+            <div class="modal-body">
+                <form id="addMenuItemForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="menuItemName">Item Name</label>
+                            <input type="text" id="menuItemName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemPhoto">Photo</label>
+                            <input type="file" id="menuItemPhoto" accept="image/*">
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemCategory">Category</label>
+                            <select id="menuItemCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="Starters">Starters</option>
+                                <option value="Mains">Mains</option>
+                                <option value="Beverages">Beverages</option>
+                                <option value="Desserts">Desserts</option>
+                                <option value="Specials">Specials</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemPrice">Price (₹)</label>
+                            <input type="number" id="menuItemPrice" min="0" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemDescription">Description</label>
+                            <textarea id="menuItemDescription" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemIngredients">Ingredients</label>
+                            <textarea id="menuItemIngredients" rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemLocation">Location</label>
+                            <select id="menuItemLocation" required>
+                                <option value="">Select Location</option>
+                                <option value="All Locations">All Locations</option>
+                                <option value="Calicut">Calicut</option>
+                                <option value="Kochi">Kochi</option>
+                                <option value="Trivandrum">Trivandrum</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="menuItemStatus">Status</label>
+                            <select id="menuItemStatus" required>
+                                <option value="Available">Available</option>
+                                <option value="Out of Stock">Out of Stock</option>
+                                <option value="Seasonal">Seasonal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="cancel-btn" onclick="closeAddMenuItemModal()">Cancel</button>
+                        <button type="submit" class="submit-btn">Add Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open add menu item modal
+        document.getElementById('addMenuItemBtn').addEventListener('click', function() {
+            document.getElementById('addMenuItemModal').style.display = 'block';
+        });
+
+        // Function to close add menu item modal
+        function closeAddMenuItemModal() {
+            document.getElementById('addMenuItemModal').style.display = 'none';
+        }
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const addMenuItemModal = document.getElementById('addMenuItemModal');
+            
+            if (event.target == addMenuItemModal) {
+                addMenuItemModal.style.display = 'none';
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('addMenuItemForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real application, you would handle form submission here
+            alert('Menu item added successfully!');
+            closeAddMenuItemModal();
+            this.reset();
+        });
+    </script>
+</body>
+</html>

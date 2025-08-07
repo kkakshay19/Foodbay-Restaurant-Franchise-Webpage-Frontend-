@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay - Admin Management</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="delivery.html" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="staff.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Admin Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Admin Management</h1>
+                <p>Manage admin accounts and permissions</p>
+            </header>
+
+            <!-- Admin Info Display Card -->
+            <div class="admin-info-section">
+                <div class="section-header">
+                    <h2>Admin Profile</h2>
+                </div>
+                
+                <div class="admin-profile-card">
+                    <div class="admin-photo-section">
+                        <div class="admin-photo">
+                            <img src="user-square.png" alt="Admin Photo">
+                        </div>
+                        <button class="edit-photo-btn">Edit Photo</button>
+                    </div>
+                    
+                    <div class="admin-details">
+                        <div class="admin-detail-item">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">Admin Name</span>
+                        </div>
+                        <div class="admin-detail-item">
+                            <span class="detail-label">Contact Number:</span>
+                            <span class="detail-value">+91 98765 43210</span>
+                        </div>
+                        <div class="admin-detail-item">
+                            <span class="detail-label">Designation:</span>
+                            <span class="detail-value">Super Admin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Editable Profile Form -->
+            <div class="edit-profile-section">
+                <div class="section-header">
+                    <h2>Edit Profile</h2>
+                </div>
+                
+                <form id="editProfileForm" class="edit-profile-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="adminName">Name</label>
+                            <input type="text" id="adminName" value="Admin Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminPhone">Phone Number</label>
+                            <input type="text" id="adminPhone" value="+91 98765 43210" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminEmail">Email</label>
+                            <input type="email" id="adminEmail" value="admin@foodbay.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="adminDesignation">Designation</label>
+                            <input type="text" id="adminDesignation" value="Super Admin" required>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="save-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Add Admin Section (only visible to Super Admins) -->
+            <div class="add-admin-section">
+                <div class="section-header">
+                    <h2>Add New Admin</h2>
+                </div>
+                
+                <form id="addAdminForm" class="add-admin-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email (used for login)</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="text" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Role/Designation</label>
+                            <select id="role" required>
+                                <option value="">Select Role</option>
+                                <option value="Super Admin">Super Admin</option>
+                                <option value="Branch Manager">Branch Manager</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Location Access</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="locations" value="Calicut">
+                                    <span class="checkmark"></span>
+                                    Calicut
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="locations" value="Kochi">
+                                    <span class="checkmark"></span>
+                                    Kochi
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="locations" value="Trivandrum">
+                                    <span class="checkmark"></span>
+                                    Trivandrum
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="locations" value="All">
+                                    <span class="checkmark"></span>
+                                    All Locations
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="toggle-label">
+                                <span>Activate Account</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="activateAccount" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Add Admin</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Handle edit profile form submission
+        document.getElementById('editProfileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real application, you would handle form submission here
+            alert('Profile updated successfully!');
+        });
+
+        // Handle add admin form submission
+        document.getElementById('addAdminForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real application, you would handle form submission here
+            alert('Admin added successfully!');
+            this.reset();
+        });
+
+        // Handle edit photo button
+        document.querySelector('.edit-photo-btn').addEventListener('click', function() {
+            // In a real application, you would open a file dialog or modal
+            alert('Edit photo functionality would open here');
+        });
+    </script>
+</body>
+</html>

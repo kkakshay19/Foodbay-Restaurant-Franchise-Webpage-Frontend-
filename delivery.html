@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbay - Delivery</title>
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Poppins">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <span>Foodbay</span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="dashboard.html" class="nav-link">
+                        <i class="fas fa-th-large"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="reservation.html" class="nav-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="order.html" class="nav-link">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Orders</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a href="delivery.html" class="nav-link">
+                        <i class="fas fa-truck"></i>
+                        <span>Delivery</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-percent"></i>
+                        <span>Offers</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="menu.html" class="nav-link">
+                        <i class="fas fa-bars"></i>
+                        <span>Menu</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="staff.html" class="nav-link">
+                        <i class="fas fa-users"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="settings.html" class="nav-link">
+                        <i class="fas fa-cog"></i>
+                        <span>Admin Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="user-profile">
+                <div class="user-avatar">AN</div>
+                <div class="user-info">
+                    <div class="user-name">Admin Name</div>
+                    <div class="user-role">Admin</div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1>Delivery Management</h1>
+                <p>Manage and track all deliveries efficiently</p>
+            </header>
+
+            <!-- Search and Filters Section -->
+            <div class="filters-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search by name, delivery ID, phone, address..." class="search-input">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filters">
+                    <div class="filter-group">
+                        <label>Status</label>
+                        <select class="filter-select">
+                            <option>All</option>
+                            <option>Assigned</option>
+                            <option>Picked Up</option>
+                            <option>Out for Delivery</option>
+                            <option>Delivered</option>
+                            <option>Cancelled</option>
+                            <option>Delayed</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Date</label>
+                        <input type="date" class="filter-date">
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Delivery Partner</label>
+                        <select class="filter-select">
+                            <option>All Partners</option>
+                            <option>Ramesh Kumar</option>
+                            <option>Suresh Patel</option>
+                            <option>Maya Devi</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Location</label>
+                        <select class="filter-select">
+                            <option>All Branches</option>
+                            <option>Calicut</option>
+                            <option>Kochi</option>
+                            <option>Trivandrum</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label>Restaurant</label>
+                        <select class="filter-select">
+                            <option>All Restaurants</option>
+                            <option>Foodbay Calicut</option>
+                            <option>Foodbay Kochi</option>
+                            <option>Foodbay Trivandrum</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deliveries Table -->
+            <div class="deliveries-table-section">
+                <div class="section-header">
+                    <h2>Delivery Records</h2>
+                    <button class="add-delivery-btn">Add New Delivery</button>
+                </div>
+                
+                <div class="table-container">
+                    <table class="deliveries-table">
+                        <thead>
+                            <tr>
+                                <th>Delivery ID</th>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Contact</th>
+                                <th>Address</th>
+                                <th>Delivery Agent</th>
+                                <th>Restaurant</th>
+                                <th>Status</th>
+                                <th>ETA</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DEL-2024-010</td>
+                                <td>ORD-2024-007</td>
+                                <td>Alice Brown</td>
+                                <td>+1 (555) 123-4567</td>
+                                <td>123 Maple Street, Calicut</td>
+                                <td>Ramesh Kumar</td>
+                                <td>Foodbay Calicut</td>
+                                <td><span class="status-tag out-for-delivery">Out for Delivery</span></td>
+                                <td>12 min</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn cancel-btn">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEL-2024-009</td>
+                                <td>ORD-2024-006</td>
+                                <td>John Smith</td>
+                                <td>+1 (555) 987-6543</td>
+                                <td>456 Oak Avenue, Kochi</td>
+                                <td>Suresh Patel</td>
+                                <td>Foodbay Kochi</td>
+                                <td><span class="status-tag delivered">Delivered</span></td>
+                                <td>-</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn cancel-btn">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEL-2024-008</td>
+                                <td>ORD-2024-005</td>
+                                <td>Emily Johnson</td>
+                                <td>+1 (555) 456-7890</td>
+                                <td>789 Pine Road, Trivandrum</td>
+                                <td>Maya Devi</td>
+                                <td>Foodbay Trivandrum</td>
+                                <td><span class="status-tag assigned">Assigned</span></td>
+                                <td>25 min</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn cancel-btn">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEL-2024-007</td>
+                                <td>ORD-2024-004</td>
+                                <td>Michael Brown</td>
+                                <td>+1 (555) 234-5678</td>
+                                <td>321 Elm Street, Calicut</td>
+                                <td>Ramesh Kumar</td>
+                                <td>Foodbay Calicut</td>
+                                <td><span class="status-tag picked-up">Picked Up</span></td>
+                                <td>8 min</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn cancel-btn">Cancel</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>DEL-2024-006</td>
+                                <td>ORD-2024-003</td>
+                                <td>Sarah Davis</td>
+                                <td>+1 (555) 876-5432</td>
+                                <td>654 Cedar Boulevard, Kochi</td>
+                                <td>Suresh Patel</td>
+                                <td>Foodbay Kochi</td>
+                                <td><span class="status-tag delayed">Delayed</span></td>
+                                <td>45 min</td>
+                                <td class="actions">
+                                    <button class="action-btn view-btn">View</button>
+                                    <button class="action-btn edit-btn">Edit</button>
+                                    <button class="action-btn cancel-btn">Cancel</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
